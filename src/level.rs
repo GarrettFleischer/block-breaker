@@ -35,7 +35,7 @@ impl Level {
 
         Wall::spawn(commands, Vec2::X, Vec2::new(-size.x / 2., 0.));
         Wall::spawn(commands, Vec2::NEG_X, Vec2::new(size.x / 2., 0.));
-        Wall::spawn(commands, Vec2::Y, Vec2::new(-size.y / 2., 0.));
-        Wall::spawn(commands, Vec2::NEG_Y, Vec2::new(size.y / 2., 0.));
+        Wall::spawn(commands, Vec2::Y, Vec2::new(0., -size.y / 2.));
+        Wall::spawn(commands, Vec2::NEG_Y, Vec2::new(0., size.y / 2.));
     }
 }
