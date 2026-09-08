@@ -1,17 +1,20 @@
+use super::wall::Wall;
 use bevy::{
     color::palettes::tailwind::{SKY_50, SKY_800},
     prelude::*,
 };
 
-use super::wall::Wall;
-
 pub const BORDER_SIZE: f32 = 4.;
 
 #[derive(Debug, Component)]
-pub struct Level;
+pub struct Level {
+    pub size: Vec2,
+}
 
 impl Level {
     pub fn spawn(commands: &mut Commands, size: Vec2) {
+        commands.spawn(Level { size: size });
+
         commands.spawn((
             Sprite {
                 custom_size: Some(Vec2::new(
