@@ -38,7 +38,7 @@ fn startup(
         }),
     ));
 
-    Level::spawn(&mut commands, CANVAS_SIZE);
+    Level::spawn(&mut commands, &mut meshes, &mut materials, CANVAS_SIZE);
 
     Paddle::spawn(&mut commands, Vec2::new(0., -CANVAS_SIZE.y * (3. / 8.)));
 

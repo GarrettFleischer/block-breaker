@@ -1,4 +1,5 @@
 use super::level::Level;
+use super::physics::HalfSize;
 use bevy::{color::palettes::tailwind::SKY_50, prelude::*};
 
 const DEFAULT_PADDLE_SIZE: Vec2 = Vec2::new(200.0, 20.0);
@@ -6,9 +7,6 @@ const PADDLE_SPEED: f32 = 400.0;
 
 #[derive(Debug, Component)]
 pub struct Paddle;
-
-#[derive(Debug, Component)]
-pub struct HalfSize(pub Vec2);
 
 impl Paddle {
     pub fn spawn(commands: &mut Commands, position: Vec2) {

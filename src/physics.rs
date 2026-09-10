@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-#[derive(Debug, Component)]
+#[derive(Debug, Component, Clone, Copy)]
 pub struct Velocity(pub Vec2);
 
 impl Velocity {
@@ -8,3 +8,6 @@ impl Velocity {
         Self(Vec2::new(x, y))
     }
 }
+
+#[derive(Debug, Component)]
+pub struct HalfSize(pub Vec2);
